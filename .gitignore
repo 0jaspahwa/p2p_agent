@@ -1,0 +1,25 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+
+# Secrets — your private key IS your identity, never commit it
+config/identity.pem
+config/*.pem
+.env
+
+# Agent storage roots (files named by hash, plus .meta sidecars)
+downloads/
+downloads_a/
+
+# Vendored binaries — install these yourself, don't bloat the repo
+ngrok.exe
+
+# Local test media
+*.mp3
+
+# Local tooling config
+.claude/
