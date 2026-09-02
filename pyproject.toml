@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "p2p-agent-cli"
+version = "0.1.0"
+dependencies = [
+    "httpx",
+    "pydantic",
+    "pyyaml",
+    "cryptography",
+    "iroh",
+    "fastapi",
+    "uvicorn"
+]
+
+[project.scripts]
+upload = "devtools.ingest_file:cli_main"
+receive = "devtools.receive:main"
+vouch = "devtools.vouch_cli:cli_main"
+revoke = "devtools.revoke_cli:cli_main"
+register = "devtools.register_cli:cli_main"
+
+[tool.setuptools]
+packages = ["agent", "devtools"]
