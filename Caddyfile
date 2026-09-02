@@ -1,0 +1,8 @@
+:4000 {
+    handle_path /tracker/* {
+        reverse_proxy localhost:8000
+    }
+    handle {
+        reverse_proxy localhost:3000
+    }
+}
